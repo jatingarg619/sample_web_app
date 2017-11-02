@@ -21,7 +21,7 @@ class Carddetailcontainer extends Component {
   	componentDidMount() {
 	   const {dispatch} = this.props
      
-     let id = 1
+     let id = this.props.params.id
     dispatch(pageCard_Actions.getPage(cardLinks.getPage  + id))
   }
 
@@ -66,7 +66,7 @@ class Carddetailcontainer extends Component {
 
 	render(){
     const{pageData} = this.props.pageCard
-
+    console.log(this.props)
     if(pageData === null){
       return <div>Loading</div>
     }else{

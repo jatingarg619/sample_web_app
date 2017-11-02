@@ -12,7 +12,7 @@ export default class Card extends React.Component  {
  		const {card} = this.props
  		return(
  			<div className="col-sm-4">
- 			<Link to='/cards/${card.id}' activeClassName="active" >
+ 			<Link to={`/cards/${card.id}`} activeClassName="active" >
  			<div style={{border:'1px solid #ddd',backgroundColor:'white' , padding: '20px'}}>
  			<img  src={card.imageUrl}  height="60" width="60"/>
  			<br></br>
